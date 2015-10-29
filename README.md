@@ -44,7 +44,7 @@ Contributing
 ------------
 
 Credits
--------
+Hilton
 
 License
--------
+Ruby
