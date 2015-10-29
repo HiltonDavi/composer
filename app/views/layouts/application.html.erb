@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Composer" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Composer" %>">
+    <%= stylesheet_link_tag "application" %>
+    <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+	<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+	<div class="container">
+	<a class="brand" href="/">The Idea app</a>
+	<ul class="nav">
+	<li class="active"><a href="/ideas">Ideas</a></li>
+	</ul>
+	</div>
+	</div>
+	</div>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <div class="container">
+  <%= yield %>
+</div>
+    </main>
+	<footer>
+		<div class="container">
+			Hilton
+		</div>
+	</footer>
+  </body>
+</html>
